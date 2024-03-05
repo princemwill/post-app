@@ -1,0 +1,75 @@
+I want to start a project app for making posts in react and java (using maven) and springboot. what is the best way to start it creating a repo on my github https://github.com/princemwill/post-app and saved locally at directory C:\Dev\projects\
+
+		The app should allow a user to make posts each post can have content that includes an optional image and text. The post should be able to be deleted or edited using buttons on the post in the top right corner. Each post should be able to be liked by clicking a heart icon/button and the total number of likes should be tallied and displayed to the right of the like button that should be in the bottom left of the post. A dislike button with a thumbs down icon should be next to the like button and should decrement the number of likes. each post should be able to have multiple comments that should be displayed in a collapsable list under the post content. each comment should be able to be edited, deleted, liked and disliked like the general post can, displaying the same increment and decrement behavior with the like and dislike buttons. Each post with it’s respective comments should be separated within a card.
+
+		Please provide the code for each front end component and all the backend parts. Also include instructions for how to start the project in intellij, commit to github and use spring intializer if needed
+		<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.0-M2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>post-app</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>post-app</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+</project>
